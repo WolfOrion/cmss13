@@ -15,7 +15,7 @@
 	/// The ckey of any player hugger that made this embryo
 	var/hugger_ckey
 	/// The total time the person is hugged divided by stages until burst
-	var/per_stage_hugged_time = 90 //Set in Initialize due to config
+	var/per_stage_hugged_time = 300 //Set in Initialize due to config
 
 /obj/item/alien_embryo/Initialize(mapload, ...)
 	. = ..()
@@ -107,11 +107,11 @@
 			if(prob(4))
 				if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
-					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
+				/*	affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
 												SPAN_DANGER("You feel something moving inside you! You start shaking uncontrollably!"))
 					affected_mob.apply_effect(1, PARALYZE)
 					affected_mob.make_jittery(105)
-					affected_mob.take_limb_damage(1)
+					affected_mob.take_limb_damage(1)*/
 			if(prob(2))
 				var/message = SPAN_WARNING("[pick("Your chest hurts a little bit", "Your stomach hurts")].")
 				to_chat(affected_mob, message)
@@ -128,11 +128,11 @@
 			if(prob(5))
 				if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
-					affected_mob.visible_message(SPAN_DANGER("\The [affected_mob] starts shaking uncontrollably!"), \
+				/*	affected_mob.visible_message(SPAN_DANGER("\The [affected_mob] starts shaking uncontrollably!"), \
 												SPAN_DANGER("You feel something moving inside you! You start shaking uncontrollably!"))
 					affected_mob.apply_effect(2, PARALYZE)
 					affected_mob.make_jittery(105)
-					affected_mob.take_limb_damage(1)
+					affected_mob.take_limb_damage(1)*/
 		if(4)
 			if(prob(2))
 				affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
@@ -144,11 +144,11 @@
 			if(prob(6))
 				if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
-					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
+				/*	affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
 												SPAN_DANGER("You feel something moving inside you! You start shaking uncontrollably!"))
 					affected_mob.apply_effect(3, PARALYZE)
 					affected_mob.make_jittery(105)
-					affected_mob.take_limb_damage(1)
+					affected_mob.take_limb_damage(1)*/
 		if(5)
 			become_larva()
 		if(7) // Stage 6 is while we are trying to find a candidate in become_larva

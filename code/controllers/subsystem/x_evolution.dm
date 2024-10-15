@@ -1,5 +1,5 @@
 #define BOOST_POWER_MAX 20
-#define BOOST_POWER_MIN 1
+#define BOOST_POWER_MIN 10
 #define EVOLUTION_INCREMENT_TIME (30 MINUTES) // Evolution increases by 1 every 25 minutes.
 
 SUBSYSTEM_DEF(xevolution)

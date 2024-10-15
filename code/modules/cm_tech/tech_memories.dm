@@ -188,10 +188,10 @@
 	// Power (smes)
 	var/message
 	var/color
-	if (!SSobjectives.first_drop_complete)
-		message = "Unable to remotely interface with powernet"
-		color = "white"
-	else if (SSobjectives.power.state == OBJECTIVE_COMPLETE)
+//	if (!SSobjectives.first_drop_complete)
+//		message = "Unable to remotely interface with powernet"
+//		color = "white"
+	if (SSobjectives.power.state == OBJECTIVE_COMPLETE)
 		message = "Online"
 		color = "green"
 	else if (SSobjectives.power.last_power_output)

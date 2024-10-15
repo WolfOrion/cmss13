@@ -19,7 +19,7 @@
 	var/incremental_shooting_camo_penalty = 35
 	var/current_camo = FULL_CAMOUFLAGE_ALPHA
 	var/camouflage_break = 5 SECONDS
-	var/camouflage_enter_delay = 4 SECONDS
+	var/camouflage_enter_delay = 2 SECONDS
 	var/can_camo = TRUE
 
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/specialist/prepare_position)
@@ -52,7 +52,7 @@
 		deactivate_camouflage(H)
 		return
 
-	H.visible_message(SPAN_DANGER("[H] goes prone, and begins adjusting \his ghillie suit!"), SPAN_NOTICE("You go prone, and begins adjusting your ghillie suit."), max_distance = 4)
+	H.visible_message(SPAN_DANGER("[H] begins adjusting \his ghillie suit!"), SPAN_NOTICE("You begin adjusting your ghillie suit."), max_distance = 4)
 	hide_in_progress = TRUE
 	H.unset_interaction() // If we're sticking to a machine gun or what not.
 	if(!do_after(H, camouflage_enter_delay, INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
@@ -147,7 +147,7 @@
 
 /datum/action/item_action/specialist/prepare_position/can_use_action()
 	var/mob/living/carbon/human/H = owner
-	if(istype(H) && !H.is_mob_incapacitated() && H.body_position == STANDING_UP && holder_item == H.wear_suit)
+	if(istype(H) && !H.is_mob_incapacitated() && holder_item == H.wear_suit)
 		return TRUE
 
 /datum/action/item_action/specialist/prepare_position/action_activate()

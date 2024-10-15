@@ -43,8 +43,8 @@
 	activate()
 
 /datum/cm_objective/power/establish_power/check_completion()
-	if(!SSobjectives.first_drop_complete)
-		return
+//	if(!SSobjectives.first_drop_complete)
+//		return
 	var/total_power_output = 0
 	for(var/obj/structure/machinery/power/smes/colony_smes in power_objects)
 		if(colony_smes.charge <= 0)

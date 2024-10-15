@@ -88,13 +88,13 @@
 	if(ckey == last_ckey_inhabited)
 		return
 
-	AddComponent(\
+/*	AddComponent(\
 		/datum/component/temporary_mute,\
 		"We aren't old enough to vocalize anything yet.",\
 		"We aren't old enough to communicate like this yet.",\
 		"We feel old enough to be able to vocalize and speak to the hivemind.",\
 		3 MINUTES,\
-	)
+	)*/
 
 /mob/living/carbon/xenomorph/lesser_drone/age_xeno()
 	if(stat == DEAD || !caste || QDELETED(src) || !client)
@@ -122,7 +122,8 @@
 
 /datum/behavior_delegate/lesser_drone_base
 	name = "Base Lesser Drone Behavior Delegate"
-
+/*
 /datum/behavior_delegate/lesser_drone_base/on_life()
 	if(bound_xeno.body_position == STANDING_UP && !(locate(/obj/effect/alien/weeds) in get_turf(bound_xeno)))
 		bound_xeno.adjustBruteLoss(5)
+*/

@@ -85,8 +85,8 @@
 
 	pain_type = /datum/pain/synthetic/colonial
 	rarity_value = 1.5
-	slowdown = 0.2
-	total_health = 200 //But more durable
+//	slowdown = 0.2
+//	total_health = 200 //But more durable
 
 	default_lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 

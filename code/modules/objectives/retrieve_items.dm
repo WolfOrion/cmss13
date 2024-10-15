@@ -12,6 +12,7 @@
 		/area/almayer/command/securestorage,
 		/area/almayer/command/computerlab,
 		/area/almayer/medical/medical_science,
+		/area/lv522/indoors/a_block/admin,
 	)
 
 /datum/cm_objective/retrieve_item/New(atom/target)

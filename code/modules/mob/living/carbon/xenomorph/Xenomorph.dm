@@ -368,7 +368,7 @@
 	wound_icon_holder = new(null, src)
 	vis_contents += wound_icon_holder
 
-	set_languages(list(LANGUAGE_XENOMORPH, LANGUAGE_HIVEMIND))
+	set_languages(list(LANGUAGE_XENOMORPH, LANGUAGE_HIVEMIND, LANGUAGE_ENGLISH))
 
 	///Handle transferring things from the old Xeno if we have one in the case of evolve, devolve etc.
 	if(old_xeno)

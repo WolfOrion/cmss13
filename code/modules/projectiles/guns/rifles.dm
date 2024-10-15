@@ -1612,7 +1612,7 @@
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 	fire_sound = 'sound/weapons/gun_carbine.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/l42a
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/abr40
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/bayonet,
@@ -1625,10 +1625,12 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/carbine,
 		/obj/item/attachable/stock/carbine/wood,
+		/obj/item/attachable/stock/carbine/wood/tactical,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/hunting,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/flashlight/grip,
 	)
@@ -1636,7 +1638,7 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
-	starting_attachment_types = list(/obj/item/attachable/stock/carbine)
+	starting_attachment_types = list(/obj/item/attachable/scope/mini/hunting,/obj/item/attachable/stock/carbine/wood/tactical)
 	map_specific_decoration = TRUE
 
 /obj/item/weapon/gun/rifle/l42a/set_gun_attachment_offsets()

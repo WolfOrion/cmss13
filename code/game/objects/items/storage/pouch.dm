@@ -1306,8 +1306,8 @@
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
-	new /obj/item/explosive/plastic(src)
-	new /obj/item/explosive/plastic(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/extinguisher/mini(src)
 
 /obj/item/storage/pouch/tools/tactical/upp
 	name = "synthetic tools pouch"

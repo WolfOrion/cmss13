@@ -5,11 +5,11 @@
 /datum/game_mode/colonialmarines
 	name = "Distress Signal"
 	config_tag = "Distress Signal"
-	required_players = 1 //Need at least one player, but really we need 2.
-	xeno_required_num = 1 //Need at least one xeno.
+	required_players = 0 //Need at least one player, but really we need 2.
+	xeno_required_num = 0 //Need at least one xeno.
 	monkey_amount = 5
 	corpses_to_spawn = 0
-	flags_round_type = MODE_INFESTATION|MODE_FOG_ACTIVATED|MODE_NEW_SPAWN
+	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN
 	static_comms_amount = 1
 	var/round_status_flags
 
@@ -122,7 +122,7 @@
 
 	addtimer(CALLBACK(src, PROC_REF(ares_online)), 5 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 20 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(start_lz_hazards)), LZ_HAZARD_START)
+//	addtimer(CALLBACK(src, PROC_REF(start_lz_hazards)), LZ_HAZARD_START)
 
 	return ..()
 
@@ -143,25 +143,25 @@
 	// Bottom left
 	options += get_valid_sentry_turfs(left, bottom, z, width=5, height=2, structures_to_ignore=structures_to_break)
 	options += get_valid_sentry_turfs(left, bottom + 2, z, width=2, height=6, structures_to_ignore=structures_to_break)
-	spawn_lz_sentry(pick(options), structures_to_break)
+//	spawn_lz_sentry(pick(options), structures_to_break)
 
 	// Bottom right
 	options.Cut()
 	options += get_valid_sentry_turfs(right-4, bottom, z, width=5, height=2, structures_to_ignore=structures_to_break)
 	options += get_valid_sentry_turfs(right-1, bottom + 2, z, width=2, height=6, structures_to_ignore=structures_to_break)
-	spawn_lz_sentry(pick(options), structures_to_break)
+//	spawn_lz_sentry(pick(options), structures_to_break)
 
 	// Top left
 	options.Cut()
 	options += get_valid_sentry_turfs(left, top-1, z, width=5, height=2, structures_to_ignore=structures_to_break)
 	options += get_valid_sentry_turfs(left, top-7, z, width=2, height=6, structures_to_ignore=structures_to_break)
-	spawn_lz_sentry(pick(options), structures_to_break)
+//	spawn_lz_sentry(pick(options), structures_to_break)
 
 	// Top right
 	options.Cut()
 	options += get_valid_sentry_turfs(right-4, top-1, z, width=5, height=2, structures_to_ignore=structures_to_break)
 	options += get_valid_sentry_turfs(right-1, top-7, z, width=2, height=6, structures_to_ignore=structures_to_break)
-	spawn_lz_sentry(pick(options), structures_to_break)
+//	spawn_lz_sentry(pick(options), structures_to_break)
 
 ///Returns a list of non-dense turfs using the given block arguments ignoring the provided structure types
 /datum/game_mode/colonialmarines/proc/get_valid_sentry_turfs(left, bottom, z, width, height, list/structures_to_ignore)
@@ -320,8 +320,8 @@
 							to_chat(M, SPAN_XENOANNOUNCE("To my children and their Queen. I sense the large doors that trap us will open in 30 seconds."))
 						addtimer(CALLBACK(src, PROC_REF(open_podlocks), "map_lockdown"), 300)
 
-			if(GLOB.round_should_check_for_win)
-				check_win()
+//			if(GLOB.round_should_check_for_win)
+//				check_win()
 			round_checkwin = 0
 
 		if(!evolution_ovipositor_threshold && world.time >= SSticker.round_start_time + round_time_evolution_ovipositor)

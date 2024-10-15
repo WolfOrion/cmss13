@@ -1,5 +1,5 @@
-#define MIN_IMPREGNATION_TIME 10 SECONDS //Time it takes to impregnate someone
-#define MAX_IMPREGNATION_TIME 15 SECONDS
+#define MIN_IMPREGNATION_TIME 30 SECONDS //Time it takes to impregnate someone
+#define MAX_IMPREGNATION_TIME 45 SECONDS
 
 #define MIN_ACTIVE_TIME 5 SECONDS //Time between being dropped and going idle
 #define MAX_ACTIVE_TIME 15 SECONDS
@@ -298,7 +298,7 @@
 		playsound(loc, 'sound/voice/pred_facehugged.ogg', 65, FALSE)
 	if(!sterile)
 		if(!human.species || !(human.species.flags & IS_SYNTHETIC)) //synthetics aren't paralyzed
-			human.apply_effect(MIN_IMPREGNATION_TIME * 0.5 * knockout_mod, PARALYZE) //THIS MIGHT NEED TWEAKS
+			human.apply_effect(MAX_IMPREGNATION_TIME, PARALYZE) //THIS MIGHT NEED TWEAKS
 
 	var/area/hug_area = get_area(src)
 	var/name = hugger ? "[hugger]" : "\a [src]"
