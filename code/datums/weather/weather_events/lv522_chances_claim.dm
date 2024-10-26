@@ -1,5 +1,5 @@
 /datum/weather_event/light_rain/lv522
-	length = 3 MINUTES
+	length = 6 MINUTES
 	lightning_chance = 4
 
 	fire_smothering_strength = 2

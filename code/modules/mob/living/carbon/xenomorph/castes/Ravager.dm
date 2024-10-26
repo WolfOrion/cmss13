@@ -115,3 +115,8 @@
 		QDEL_NULL(rav_shield)
 		to_chat(bound_xeno, SPAN_XENODANGER("We feel our shield decay!"))
 		bound_xeno.overlay_shields()
+
+/mob/living/carbon/xenomorph/ravager/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 25, 11, 3, "alien_footstep_medium")

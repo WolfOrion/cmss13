@@ -84,6 +84,8 @@
 	SSmob.living_misc_mobs += src
 	GLOB.hellhound_list += src
 
+	AddComponent(/datum/component/footstep, 2, 20, 11, 2, "alien_footstep_small")
+
 /mob/living/carbon/xenomorph/hellhound/prepare_huds()
 	..()
 	var/image/health_holder = hud_list[HEALTH_HUD_XENO]

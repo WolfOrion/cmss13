@@ -243,3 +243,8 @@
 	limb.droplimb(0, 0, initial(name))
 
 	return TRUE
+
+/mob/living/carbon/xenomorph/warrior/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 25, 11, 2, "alien_footstep_medium")

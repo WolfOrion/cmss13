@@ -103,3 +103,8 @@
 	bound_xeno.add_xeno_shield(reward_shield, XENO_SHIELD_SOURCE_BASE_PRAE, add_shield_on = TRUE, max_shield = 45)
 	to_chat(bound_xeno, SPAN_NOTICE("Your exoskeleton shimmers for a fraction of a second as the acid coats your target."))
 	return
+
+/mob/living/carbon/xenomorph/praetorian/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 25, 11, 3, "alien_footstep_medium")

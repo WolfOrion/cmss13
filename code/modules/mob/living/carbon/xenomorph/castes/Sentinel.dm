@@ -106,3 +106,8 @@
 	human_target.KnockDown(2)
 	human_target.Stun(2)
 	to_chat(human_target, SPAN_XENOHIGHDANGER("You fall over, paralyzed by the toxin!"))
+
+/mob/living/carbon/xenomorph/sentinel/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 20, 11, 2, "alien_footstep_small")

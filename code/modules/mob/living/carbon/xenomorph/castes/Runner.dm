@@ -94,3 +94,8 @@
 	var/datum/action/xeno_action/onclick/xenohide/hide = get_action(bound_xeno, /datum/action/xeno_action/onclick/xenohide)
 	if(hide)
 		hide.post_attack()
+
+/mob/living/carbon/xenomorph/runner/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 20, 11, 2, "alien_footstep_small")

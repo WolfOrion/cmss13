@@ -398,3 +398,8 @@
 /datum/behavior_delegate/carrier_base/on_update_icons()
 	var/mob/living/carbon/xenomorph/carrier/bound_carrier = bound_xeno
 	bound_carrier.update_hugger_overlays()
+
+/mob/living/carbon/xenomorph/carrier/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 25, 11, 2, "alien_footstep_medium")

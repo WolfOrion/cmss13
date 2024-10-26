@@ -187,3 +187,8 @@
 
 	to_chat(bound_xeno, SPAN_XENOHIGHDANGER("We bumped into someone and lost our invisibility!"))
 	lurker_invisibility_action.invisibility_off(0.5) // partial refund of remaining time
+
+/mob/living/carbon/xenomorph/lurker/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 20, 8, 1, "alien_footstep_small")

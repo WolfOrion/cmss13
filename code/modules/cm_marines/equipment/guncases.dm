@@ -192,7 +192,7 @@
 	can_hold = list(/obj/item/weapon/gun/rifle/m41a, /obj/item/ammo_magazine/rifle)
 
 /obj/item/storage/box/guncase/m41a/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/m41a(src)
+	new /obj/item/weapon/gun/rifle/m41a/recon(src)
 	for(var/i = 1 to 4)
 		new /obj/item/ammo_magazine/rifle(src)
 

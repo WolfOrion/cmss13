@@ -127,3 +127,8 @@
 	if(bound_xeno.body_position == STANDING_UP && !(locate(/obj/effect/alien/weeds) in get_turf(bound_xeno)))
 		bound_xeno.adjustBruteLoss(5)
 */
+
+/mob/living/carbon/xenomorph/lesser_drone/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 20, 11, 1, "alien_footstep_small")

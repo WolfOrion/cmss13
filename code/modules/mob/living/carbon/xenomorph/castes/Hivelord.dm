@@ -123,3 +123,8 @@
 	toggle_resin_walker()
 	to_chat(bound_xeno, SPAN_WARNING("You feel dizzy as the world slows down."))
 	bound_xeno.recalculate_move_delay = TRUE
+
+/mob/living/carbon/xenomorph/hivelord/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 20, 11, 2, "alien_footstep_medium")

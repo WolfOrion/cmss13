@@ -479,6 +479,14 @@
 	desc = "A ball-cap, typically worn by the more casual of the USCM's Military Police."
 	icon_state = "mpcap"
 
+/obj/item/clothing/head/beret/marine/mp/mpcap/delta
+	name = "\improper USCM baseball cap"
+	desc = "A ball-cap, with the USCM delta patch glued to the front."
+	icon_state = "deltacap"
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 /obj/item/clothing/head/beret/marine/mp/provost
 	name = "\improper USCM provost beret"
 	icon_state = "beretwo"

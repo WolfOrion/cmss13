@@ -98,3 +98,8 @@
 // No special behavior for boilers
 /datum/behavior_delegate/boiler_base
 	name = "Base Boiler Behavior Delegate"
+
+/mob/living/carbon/xenomorph/boiler/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 25, 11, 2, "alien_footstep_medium")

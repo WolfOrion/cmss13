@@ -199,7 +199,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/durag
 
 /datum/gear/headwear/uscm
-	allowed_origins = USCM_ORIGINS
+//	allowed_origins = USCM_ORIGINS
 
 /datum/gear/headwear/uscm/bandana_green
 	display_name = "USCM bandana, green"
@@ -250,8 +250,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/cmcap/boonie/tan
 
 /datum/gear/headwear/uscm/cap
-	display_name = "USCM cap"
+	display_name = "USCM patrol cap"
 	path = /obj/item/clothing/head/cmcap
+
+/datum/gear/headwear/uscm/deltacap
+	display_name = "USCM baseball cap"
+	path = /obj/item/clothing/head/beret/marine/mp/mpcap/delta
 
 /datum/gear/headwear/uscm/headband_brown
 	display_name = "USCM headband, brown"

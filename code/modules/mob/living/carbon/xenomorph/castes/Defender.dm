@@ -94,3 +94,8 @@
 	if(bound_xeno.crest_defense && bound_xeno.health > 0)
 		bound_xeno.icon_state = "[bound_xeno.get_strain_icon()] Defender Crest"
 		return TRUE
+
+/mob/living/carbon/xenomorph/defender/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 25, 11, 2, "alien_footstep_medium")

@@ -105,3 +105,8 @@
 
 /datum/behavior_delegate/burrower_base
 	name = "Base Burrower Behavior Delegate"
+
+/mob/living/carbon/xenomorph/burrower/Initialize()
+	. = ..()
+
+	AddComponent(/datum/component/footstep, 2, 20, 11, 2, "alien_footstep_small")
